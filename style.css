@@ -1,23 +1,30 @@
 #highscores{
     font-size: medium;
     color: #663399;
-    font-weight: 100;
     text-align: center;
+    padding-top: 30px;
+    font-weight: bolder;
 }
 
 a:link {
     text-decoration: none; 
-    color: #cc00cc;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    color: #9966cc;
+    letter-spacing: 2px;
+    font-size: 8px;
 }
 
 a:visited {
     text-decoration: none;
-    color: #cc00cc;
+    font-family: 'Press Start 2P', cursive;
+    color: #9966cc;
 }
   
 a:hover {
+    font-family: 'Press Start 2P', cursive;
     text-decoration: none;
-    color: rebeccapurple;
+    color: #ff00cc;
     padding: 2px;
 }
 
@@ -25,6 +32,52 @@ a:hover {
     text-align: center;
     font-size: larger;
     font-weight: 500;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #cc00cc;
+    font-family: 'Press Start 2P', cursive;
+    color: #ff00cc;
+    padding-top: 80;
+}
+
+h1 {
+    letter-spacing: 2px;
+    text-align: center;
+    padding: auto;
+    color: #9966cc;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    padding-top: 170px;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 15px;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Saira', sans-serif;      
+    text-align: center;
+    color: #555555;
+}
+
+.buttonsubmit {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#startbutton {
+    background-color: #9966cc;
+    border: none;
+    color: white;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    display: inline-block;
+    font-size: medium;
+    font-weight: bold;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#startbutton:hover {
+    background-color: #ff00cc;
+    font-style: oblique;
 }
