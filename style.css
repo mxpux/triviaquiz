@@ -1,0 +1,30 @@
+#highscores{
+    font-size: medium;
+    color: #663399;
+    font-weight: 100;
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none; 
+    color: #cc00cc;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #cc00cc;
+}
+  
+a:hover {
+    text-decoration: none;
+    color: rebeccapurple;
+    padding: 2px;
+}
+
+#time {
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #cc00cc;
+}
