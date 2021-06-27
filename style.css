@@ -4,6 +4,7 @@
     text-align: center;
     padding-top: 30px;
     font-weight: bolder;
+    padding-bottom: 30px;
 }
 
 a:link {
@@ -28,13 +29,14 @@ a:hover {
     padding: 2px;
 }
 
-#time {
+#timeCounter {
     text-align: center;
     font-size: larger;
     font-weight: 500;
     font-family: 'Press Start 2P', cursive;
     color: #ff00cc;
-    padding-top: 80;
+    margin-top: 20;
+
 }
 
 h1 {
