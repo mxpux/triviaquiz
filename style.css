@@ -1,6 +1,11 @@
+body {
+    background-color: #1D3840;
+}
+
+
 #highscores{
     font-size: medium;
-    color: #663399;
+    color: #B8D1D9;
     text-align: center;
     padding-top: 30px;
     font-weight: bolder;
@@ -11,7 +16,7 @@ a:link {
     text-decoration: none; 
     font-weight: bold;
     font-family: 'Press Start 2P', cursive;
-    color: #9966cc;
+    color: #B8D1D9;
     letter-spacing: 2px;
     font-size: 8px;
 }
@@ -19,13 +24,13 @@ a:link {
 a:visited {
     text-decoration: none;
     font-family: 'Press Start 2P', cursive;
-    color: #9966cc;
+    color: #FF7F00;
 }
   
 a:hover {
     font-family: 'Press Start 2P', cursive;
     text-decoration: none;
-    color: #ff00cc;
+    color: #E65C17;
     padding: 2px;
 }
 
@@ -34,7 +39,7 @@ a:hover {
     font-size: larger;
     font-weight: 500;
     font-family: 'Press Start 2P', cursive;
-    color: #ff00cc;
+    color: #E65C17;
     margin-top: 20;
 
 }
@@ -43,7 +48,7 @@ h1 {
     letter-spacing: 2px;
     text-align: center;
     padding: auto;
-    color: #9966cc;
+    color: #B8D1D9;
     font-family: 'Press Start 2P', cursive;
     font-size: 30px;
     padding-top: 170px;
@@ -55,7 +60,7 @@ p {
     font-family: 'Press Start 2P', cursive;
     font-family: 'Saira', sans-serif;      
     text-align: center;
-    color: #555555;
+    color: #cccccc;
     letter-spacing: 2px;
 }
 
@@ -65,7 +70,7 @@ p {
 }
 
 #startbutton {
-    background-color: #9966cc;
+    background-color: #397B80;
     border: none;
     color: white;
     padding: 20px 20px 20px 20px;
@@ -81,6 +86,44 @@ p {
 }
 
 #startbutton:hover {
-    background-color: #ff00cc;
+    background-color: #E65C17;
+    font-style: oblique;
+}
+
+#container {
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#containerQuiz {
+    background-color: rgb(184, 94, 16);
+    width: 700px;
+  
+}
+
+#questions {
+    font-size: medium;
+    font-weight: bold;
+    color: skyblue;
+    padding: 10px 10px 10px 10px;
+
+}
+
+.answerBtn {
+    padding-top: 60px;
+    background-color: #04AA6D; 
+    color: white; /* White text */
+    font-size:larger;
+    padding: 10px 10px 10px 10px;
+    width: 100%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+
+}
+
+.answerBtn:hover {
+    background-color: #3d09ca;
     font-style: oblique;
 }
