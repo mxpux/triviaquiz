@@ -6,7 +6,7 @@
 // THEN a timer starts and I am presented with a question
 
 document.getElementById("startbutton").addEventListener("click", function startTimer(){
-    var timeleft = 59;
+    var timeleft = 5;
     var countDown = setInterval(function startTimer(){
     document.getElementById("timeCounter").innerHTML = "00:"+timeleft;
     timeleft -= 1;
@@ -23,21 +23,22 @@ document.getElementById("startbutton").addEventListener("click", function startT
 // then question 1 appears
 // const startingQuiz = document.getElementById("containerQuiz")
 // const introScreen = document.getElementById("startscreen")
+var introscreen = document.getElementById("startscreen")
+var quizscreen = document.getElementById("containerQuiz")
+
 
 
     function startGame() {
-        var introscreen = document.getElementById("startscreen")
-        var quizscreen = document.getElementById("containerQuiz")
-
 
         if (introscreen.style.display === "block") {
             quizscreen.style.display = "none";
         } else {
             quizscreen.style.display = "block";
+            introscreen.style.display = "none"
         }
       }
-      console.log("started")
-    
+   
+  
     
  
   
