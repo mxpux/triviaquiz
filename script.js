@@ -6,7 +6,7 @@
 // THEN a timer starts and I am presented with a question
 
 document.getElementById("startbutton").addEventListener("click", function startTimer(){
-    var timeleft = 5;
+    var timeleft = 59;
     var countDown = setInterval(function startTimer(){
     document.getElementById("timeCounter").innerHTML = "00:"+timeleft;
     timeleft -= 1;
@@ -17,7 +17,7 @@ document.getElementById("startbutton").addEventListener("click", function startT
     }, 1000);
 
     console.log(timeCounter);
-});
+    });
 
 // When I click on start
 // then question 1 appears
@@ -25,8 +25,7 @@ document.getElementById("startbutton").addEventListener("click", function startT
 // const introScreen = document.getElementById("startscreen")
 var introscreen = document.getElementById("startscreen")
 var quizscreen = document.getElementById("containerQuiz")
-
-
+var questionsArray = [];
 
     function startGame() {
 
@@ -35,18 +34,23 @@ var quizscreen = document.getElementById("containerQuiz")
         } else {
             quizscreen.style.display = "block";
             introscreen.style.display = "none"
-        }
-      }
+        }}
    
   
     
- 
-  
-    
-
 // WHEN I answer a question
 // THEN I am presented with another question
 
+var questionList = {
+    q1: "what is one. test how long this container can hold text",
+    qChoices: ["one","two","c","d"],
+    qAnswer: 0
+
+}
+
+    let titleDiv = document.getElementById("questions");
+
+    titleDiv.textContent = questionList.q1;
 
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock

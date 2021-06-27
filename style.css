@@ -64,7 +64,7 @@ h1 {
 }
 
 p {
-    font-size: 11px;
+    font-size: 13px;
     font-family: 'Saira', sans-serif;      
     text-align: center;
     color: #cccccc;
@@ -110,7 +110,7 @@ p {
 }
 
 #containerQuiz {
-    background-color: rgb(184, 94, 16);
+    background-color: #E65C17;
     width: 750px;
   
 }
@@ -133,11 +133,12 @@ p {
     width: 100%; 
     display: block; 
     text-align: left;
-    border-color: #151515;
+    font-weight: bolder;
+    border-color: #8a8a8a;
 }
 
 .answerBtn:hover {
-    background-color: #303030;
+    background-color: #397B80;
     font-style: oblique;
 }
 
@@ -154,7 +155,7 @@ p {
 
 .answerBtn .wrong{
     padding-top: 60px;
-    background-color: #E65C17; 
+    background-color: #e61755; 
     color: white; 
     font-size: 15px;
     padding: 10px 10px 10px 10px;
