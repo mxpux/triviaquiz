@@ -16,13 +16,11 @@ document.getElementById("startbutton").addEventListener("click", function startT
     }
     }, 1000);
 
-    console.log(timeCounter);
     });
 
 // When I click on start
 // then question 1 appears
-// const startingQuiz = document.getElementById("containerQuiz")
-// const introScreen = document.getElementById("startscreen")
+
 var introscreen = document.getElementById("startscreen")
 var quizscreen = document.getElementById("containerQuiz")
 var questionsArray = [];
@@ -35,22 +33,35 @@ var questionsArray = [];
             quizscreen.style.display = "block";
             introscreen.style.display = "none"
         }}
-   
-  
-    
-// WHEN I answer a question
-// THEN I am presented with another question
 
 var questionList = {
     q1: "what is one. test how long this container can hold text",
     qChoices: ["one","two","c","d"],
-    qAnswer: 0
+    qAnswer: 0,
 
 }
 
+function showQuestion(q) {
     let titleDiv = document.getElementById("questions");
+    titleDiv.textContent = q.q1;
 
-    titleDiv.textContent = questionList.q1;
+    let ansBtn = document.querySelectorAll(".answerBtn");
+    
+    i=0
+    ansBtn.forEach(function(element){
+      element.textContent = q.qChoices[i];
+      i++
+    
+    });
+}
+ 
+showQuestion(questionList);
+
+
+// WHEN I answer a question
+// THEN I am presented with another question
+
+
 
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock
