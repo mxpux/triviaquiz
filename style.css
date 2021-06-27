@@ -51,11 +51,12 @@ h1 {
 }
 
 p {
-    font-size: 15px;
+    font-size: 11px;
     font-family: 'Press Start 2P', cursive;
     font-family: 'Saira', sans-serif;      
     text-align: center;
     color: #555555;
+    letter-spacing: 2px;
 }
 
 .buttonsubmit {
