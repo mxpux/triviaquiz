@@ -5,12 +5,10 @@
 // WHEN I click the start button
 // THEN a timer starts and I am presented with a question
 
-document.getElementById("startbutton").addEventListener("click", function(){
-    var timeleft = 3;
-
-    var countDown = setInterval(function function1(){
+document.getElementById("startbutton").addEventListener("click", function startTimer(){
+    var timeleft = 59;
+    var countDown = setInterval(function startTimer(){
     document.getElementById("timeCounter").innerHTML = "00:"+timeleft;
-
     timeleft -= 1;
     if(timeleft === 0){
         clearInterval(countDown);
@@ -23,15 +21,27 @@ document.getElementById("startbutton").addEventListener("click", function(){
 
 // When I click on start
 // then question 1 appears
+// const startingQuiz = document.getElementById("containerQuiz")
+// const introScreen = document.getElementById("startscreen")
 
-    const startQuiz = document.getElementById('startbutton')
-    startQuiz.addEventListener('click', startGame)
 
-    function startGame (){
-        console.log("started")
-        startQuiz.classList.add("hide")
+    function startGame() {
+        var introscreen = document.getElementById("startscreen")
+        var quizscreen = document.getElementById("containerQuiz")
 
-    }
+
+        if (introscreen.style.display === "block") {
+            quizscreen.style.display = "none";
+        } else {
+            quizscreen.style.display = "block";
+        }
+      }
+      console.log("started")
+    
+    
+ 
+  
+    
 
 // WHEN I answer a question
 // THEN I am presented with another question
