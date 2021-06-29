@@ -1,7 +1,7 @@
 # triviaquiz
 # **C O D E Q U I Z**
 #### 
- > Quiz link *NEED TO UPDATE LINK* NOTE TO SELF: [**Code Quiz JavaScript Game**](https://mxpux.github.io/passgen/)
+ > Quiz link *NEED TO UPDATE LINK* NOTE TO SELF!: [**Code Quiz JavaScript Game**](https://mxpux.github.io/passgen/)
 
 ***
 

@@ -15,37 +15,47 @@
 
 </head>
 <body class>
+
+    <!-- Intro screen -->
+    <!-- Timer and high score link section -->
     <div id="highscores"><a href="highscores.html">VIEW HIGHSCORES</a></div>
     <div id="timeCounter">00:00</div>
-
     <div id="startscreen">
          <h1>CODING QUIZ CHALLENGE</h1>
          <p class="quizInfo">TRY TO ANSWER THE FOLLOWING CODE-RELATED QUESTIONS WITHIN THE TIME LIMIT.</p>
          <p class="keepinmind">KEEP IN MIND THAT INCORRECT ANSWERS WILL PENALIZE YOUR SCORE/TIME BY 10-SECONDS!
          </p>
-        
+    <!-- Start Button to Start the Quiz -->
     <div class="buttonsubmit">
     <button id="startbutton" onclick="startGame()">Start Quiz</button>
     </div></div>
+    <!-- End of Intro screen -->
 
+
+    <!-- Start of quiz container -->
     <div id="container">
-                <div id="containerQuiz" class="hide">
-                    
+                <div id="containerQuiz" class="hide">   
                 <div id="questions">questions</div>
+                <!-- Start of answer buttons -->
                 <div id="answerChoices" class="listBtn"></div>
-
                 </div>
                 </div>
+    <!-- End of quiz container -->
+         
+    
+    <!-- Start of End Game page -->
     <div id="endScreen">
-                <!-- input form name -->
             <h2>All Done!</h2>
+            <!-- Score section -->
             <p>Your final score is <span class="timeScore"></span></p>
+            <!-- Initials for High scores section -->
             <p>
             Enter initials: <input type="text" id="initials" max="3" />
             <button id="submit">Submit</button>
             </p></div>
-          
-     </div>
+    </div>
+    <!-- End of page -->  
+
 
     <script src="script.js"></script>
 </body>

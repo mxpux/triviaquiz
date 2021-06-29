@@ -1,5 +1,6 @@
 
 //GIVEN I am taking a code quiz
+
 var countDown;
 var timeLeft = 59;
 var introScreenEl = document.getElementById("startscreen")
@@ -13,16 +14,15 @@ var submitBtn = document.getElementById("submit")
 // WHEN I click the start button
 // THEN a timer starts and I am presented with a question
 
-
 document.getElementById("startbutton").addEventListener("click", function startTimer(){
     countDown = setInterval(function startTimer(){
     document.getElementById("timeCounter").innerHTML = "00:"+timeLeft;
     timeLeft -= 1;
-    if(timeLeft === 0){
+        if(timeLeft === 0){
         clearInterval(countDown);
         document.getElementById("timeCounter").innerHTML = "GAME OVER"
-    }
-    }, 1000);
+        }
+        }, 1000);
 
     });
 
@@ -39,6 +39,7 @@ document.getElementById("startbutton").addEventListener("click", function startT
         }}
 
 var questionList = [
+
     {
         question: "Inside which HTML element do we put the JavaScript?",
         choices: ["<js>","<javascript>","<script>","<link rel>"],
@@ -74,65 +75,64 @@ var questionList = [
         choices: ["<!--This is a comment-->","'This is a comment","!+This is a comment+!","//This is a comment"],
         answer: "//This is a comment"
     }
-]
+    ]
+
 
 // WHEN I answer a question
 // THEN I am presented with another question
 
+    function showQuestion() {
+     const currentQuestion = questionList[questionIndex]
+     let titleDiv = document.getElementById("questions");
+     titleDiv.textContent = currentQuestion.question;
 
-function showQuestion() {
-    const currentQuestion = questionList[questionIndex]
-    let titleDiv = document.getElementById("questions");
-    titleDiv.textContent = currentQuestion.question;
-
-    let questionZone = document.querySelector(".listBtn");
-    questionZone.innerHTML="";
+     let questionZone = document.querySelector(".listBtn");
+     questionZone.innerHTML="";
     
-    currentQuestion.choices.forEach(function(element){
+     currentQuestion.choices.forEach(function(element){
 
-    let tempBtn = document.createElement("button");
-    tempBtn.classList.add("quizBtn");
-    tempBtn.setAttribute("value", element);
-    tempBtn.textContent = element;
-    tempBtn.onclick = clickButton;
-    questionZone.appendChild(tempBtn)
-
+     let tempBtn = document.createElement("button");
+     tempBtn.classList.add("quizBtn");
+     tempBtn.setAttribute("value", element);
+     tempBtn.textContent = element;
+     tempBtn.onclick = clickButton;
+     questionZone.appendChild(tempBtn)
     
-    });
-}
+     });
+    }
  
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock
 
     function clickButton(){
-    const selectedAnswer = this.value;
-    const correctAnswer = questionList[questionIndex].answer;
-    console.log(selectedAnswer, correctAnswer)
-    if ( correctAnswer !== selectedAnswer){
-        timeLeft -= 10;
-    }
+     const selectedAnswer = this.value;
+     const correctAnswer = questionList[questionIndex].answer;
+     console.log(selectedAnswer, correctAnswer)
+         if ( correctAnswer !== selectedAnswer){
+            timeLeft -= 10;
+             }
     questionIndex++;
-    if (questionIndex === questionList.length){
-    endGame ()}
-    else {
-         showQuestion()
-         }
+         if (questionIndex === questionList.length){
+            endGame ()}
+         else {
+             showQuestion()
+             }
 
-    }
+             }
 
     function rightAnswer(element, correctAnswer){
-        if ( correctAnswer !== selectedAnswer){
-            document.getElementById("wrong")
-        }
+         if ( correctAnswer !== selectedAnswer){
+             document.getElementById("wrong")
+             }
 
     }
 
     function endGame (){
         quizScreenEl.style.display = "none"
         endScreenEl.style.display = "block"
-        // stop timer 
+        // This is to stop the timer
         clearInterval(countDown)
-        // update the span with the score
+        // Update the span with the score
         const timeScoreEl = document.querySelector(".timeScore");
         timeScoreEl.textContent = timeLeft;
 
