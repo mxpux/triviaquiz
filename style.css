@@ -124,7 +124,7 @@ p {
 
 }
 
-.answerBtn {
+.quizBtn {
     padding-top: 60px;
     background-color: #242121; 
     color: white; 
@@ -137,12 +137,12 @@ p {
     border-color: #8a8a8a;
 }
 
-.answerBtn:hover {
+.quizBtn:hover {
     background-color: #397B80;
     font-style: oblique;
 }
 
-.answerBtn .correct{
+.quizBtn .correct{
     padding-top: 60px;
     background-color: green; 
     color: white; 
@@ -153,7 +153,7 @@ p {
     text-align: left;
 }
 
-.answerBtn .wrong{
+.quizBtn .wrong{
     padding-top: 60px;
     background-color: #e61755; 
     color: white; 
