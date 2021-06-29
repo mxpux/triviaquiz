@@ -96,6 +96,9 @@ function showQuestion() {
     tempBtn.textContent = element;
     tempBtn.onclick = clickButton;
     questionZone.appendChild(tempBtn)
+
+    function submitButtonStyle() { 
+        document.getElementsByClassName("stylebutton").style.backgroundColor = "red"; }﻿
     
     });
 }
