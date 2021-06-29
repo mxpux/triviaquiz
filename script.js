@@ -97,8 +97,6 @@ function showQuestion() {
     tempBtn.onclick = clickButton;
     questionZone.appendChild(tempBtn)
 
-    function submitButtonStyle() { 
-        document.getElementsByClassName("stylebutton").style.backgroundColor = "red"; }﻿
     
     });
 }
@@ -106,9 +104,9 @@ function showQuestion() {
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock
 
-function clickButton(){
+    function clickButton(){
     const selectedAnswer = this.value;
-    const correctAnswer =  questionList[questionIndex].answer;
+    const correctAnswer = questionList[questionIndex].answer;
     console.log(selectedAnswer, correctAnswer)
     if ( correctAnswer !== selectedAnswer){
         timeLeft -= 10;
@@ -119,6 +117,13 @@ function clickButton(){
     else {
          showQuestion()
          }
+
+    }
+
+    function rightAnswer(element, correctAnswer){
+        if ( correctAnswer !== selectedAnswer){
+            document.getElementById("wrong")
+        }
 
     }
 

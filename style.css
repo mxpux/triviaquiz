@@ -130,9 +130,9 @@ p, li {
 }
 
 #questions {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
-    color: skyblue;
+    color: rgb(220, 220, 220);
     font-family: 'Saira', sans-serif;    
     padding: 10px 10px 10px 10px;
 
@@ -143,17 +143,21 @@ p, li {
     background-color: #242121; 
     color: white; 
     font-size:larger;
-    padding: 10px 10px 10px 10px;
+    padding: 14px 14px 14px 14px;
     width: 100%; 
     display: block; 
     text-align: left;
     font-weight: bolder;
     border-color: #8a8a8a;
+    border-color: #E65C17;
+    border-style: dotted;
+    
 }
 
 .quizBtn:hover {
-    background-color: #397B80;
+    background-color: #cdcdcd;
     font-style: oblique;
+    color: rgb(37, 38, 37);
 }
 
 .quizBtn .correct{
@@ -167,7 +171,7 @@ p, li {
     text-align: left;
 }
 
-.quizBtn .wrong{
+.quizBtn #wrong{
     padding-top: 60px;
     background-color: #e61755; 
     color: white; 
