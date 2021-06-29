@@ -67,13 +67,18 @@ var questionList = [
         question: "Which operator is used to assign a value to a variable?",
         choices: ["=","()",";","i++"],
         answer: "="
+    },
+
+    {
+        question: "How can you add a comment in a JavaScript?",
+        choices: ["<!--This is a comment-->","'This is a comment","!+This is a comment+!","//This is a comment"],
+        answer: "//This is a comment"
     }
-
 ]
-
 
 // WHEN I answer a question
 // THEN I am presented with another question
+
 
 function showQuestion() {
     const currentQuestion = questionList[questionIndex]
@@ -94,8 +99,7 @@ function showQuestion() {
     
     });
 }
-
-
+ 
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock
 
@@ -114,9 +118,40 @@ function clickButton(){
          }
 
     }
+
+    function endGame (){
+        quizScreenEl.style.display = "none"
+        endScreenEl.style.display = "block"
+        // stop timer 
+        clearInterval(countDown)
+        // update the span with the score
+        const timeScoreEl = document.querySelector(".timeScore");
+        timeScoreEl.textContent = timeLeft;
+
+    }
+
 // WHEN all questions are answered or the timer reaches 0
 // THEN the game is over
 // WHEN the game is over
 
 
+    function saveHighScore(){
+        const intialsEl = document.getElementById("initials");
+        const initials = intialsEl.value;
+        let highScores = JSON.parse(localStorage.getItem("highScores"))||[];
+        let newScore = {
+            initials: initials,
+            score: timeLeft
+        }
+        highScores.push(newScore);
+        console.log(initials)
+        localStorage.setItem("highScores", JSON.stringify(highScores));
+        //redirect to highscore.html
+        window.location.href = "./highscores.html"
+
+    }
+
+
 // THEN I can save my initials and my score
+showQuestion(questionList);
+submitBtn.onclick = saveHighScore
