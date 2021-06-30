@@ -159,7 +159,7 @@ var questionList = [
         console.log(initials)
         localStorage.setItem("highScores", JSON.stringify(highScores));
         //redirect to highscore.html
-        window.location.href = "./highscores.html"
+        window.location.href = "Assets/highscores.html"
 
     }
 
