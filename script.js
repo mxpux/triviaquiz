@@ -55,7 +55,7 @@ var questionList = [
     {
         question: "How do you round the number 7.25, to the nearest integer?",
         choices: ["math.floor(7.25)","(7.25)","7","Math.round(7.25)"],
-        answer: "Math.round(7.25) "
+        answer: "Math.round(7.25)"
     },
 
     {
@@ -78,10 +78,11 @@ var questionList = [
     ]
 
 
+
 // WHEN I answer a question
 // THEN I am presented with another question
 
-    function showQuestion() {
+     function showQuestion() {
      const currentQuestion = questionList[questionIndex]
      let titleDiv = document.getElementById("questions");
      titleDiv.textContent = currentQuestion.question;
@@ -101,6 +102,9 @@ var questionList = [
      });
     }
  
+
+
+
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock
 
@@ -110,22 +114,22 @@ var questionList = [
      console.log(selectedAnswer, correctAnswer)
          if ( correctAnswer !== selectedAnswer){
             timeLeft -= 10;
-             }
+            document.body.style.backgroundColor = "#800000";
+            }
+            else {
+            document.body.style.backgroundColor = "#145214";
+            }
+             
     questionIndex++;
          if (questionIndex === questionList.length){
-            endGame ()}
+            endGame ()
+            document.body.style.backgroundColor = "#242121";
+        }
          else {
              showQuestion()
              }
 
              }
-
-    function rightAnswer(element, correctAnswer){
-         if ( correctAnswer !== selectedAnswer){
-             document.getElementById("wrong")
-             }
-
-    }
 
     function endGame (){
         quizScreenEl.style.display = "none"

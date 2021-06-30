@@ -2,13 +2,6 @@ body {
     background-color: #242121;
 }
 
-body.wrongans {
-    background-color: orangered;
-}
-
-body.correctans {
-    background-color: #1D3840;
-}
 
 
 #highscores{
@@ -193,4 +186,15 @@ p, li {
     color: #ffff00;
     padding: 2px;
     font-size: larger;
+}
+
+.wrong{
+    padding-top: 60px;
+    background-color: #e61755; 
+    color: white; 
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+    width: 100%; 
+    display: block; 
+    text-align: left;
 }
