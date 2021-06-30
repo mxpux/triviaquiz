@@ -2,8 +2,7 @@ body {
     background-color: #242121;
 }
 
-
-
+/* High score link section */
 #highscores{
     font-size: medium;
     color: #B8D1D9;
@@ -23,7 +22,6 @@ body {
     padding-top: 170px;
     padding-bottom: 10px;
 }
-
 
 a:link {
     text-decoration: none; 
@@ -47,6 +45,8 @@ a:hover {
     padding: 2px;
 }
 
+/* End of high score section */
+/* Start of timer section */
 #timeCounter {
     text-align: center;
     font-size: larger;
@@ -56,7 +56,8 @@ a:hover {
     margin-top: 20;
 
 }
-
+/* End of timer section */
+/* Start of quiz section */
 h1, h2 {
     letter-spacing: 2px;
     text-align: center;
@@ -81,7 +82,7 @@ p, li {
 .keepinmind {
     font-style: oblique;
 }
-
+/* Start of start-quiz button section */
 .buttonsubmit {
     text-align: center;
     padding-top: 30px;
@@ -108,6 +109,7 @@ p, li {
     background-color: #E65C17;
     font-style: oblique;
 }
+/* End of start-quiz button section */
 
 #container {
     display: flex;
@@ -119,7 +121,6 @@ p, li {
 #containerQuiz {
     background-color: #E65C17;
     width: 750px;
-  
 }
 
 #questions {
@@ -130,7 +131,7 @@ p, li {
     padding: 10px 10px 10px 10px;
 
 }
-
+/* Start of button-selections section */
 .quizBtn {
     padding-top: 60px;
     background-color: #242121; 
@@ -174,11 +175,14 @@ p, li {
     display: block; 
     text-align: left;
 }
+/* End of button-selections section */
+/* Start of quiz section */
 
 .hide {
     display: none;
 }
 
+/* Start of quiz score */
 .timeScore {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
@@ -187,14 +191,4 @@ p, li {
     padding: 2px;
     font-size: larger;
 }
-
-.wrong{
-    padding-top: 60px;
-    background-color: #e61755; 
-    color: white; 
-    font-size: 15px;
-    padding: 10px 10px 10px 10px;
-    width: 100%; 
-    display: block; 
-    text-align: left;
-}
+/* End of quiz score */
